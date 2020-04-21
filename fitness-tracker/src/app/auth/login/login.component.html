@@ -30,9 +30,11 @@
       type="submit"
       mat-raised-button
       color="primary"
+      *ngIf="!isLoading"
       [disabled]="loginForm.invalid"
     >
       Submit
     </button>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
   </form>
 </section>
